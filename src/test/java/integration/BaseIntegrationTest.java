@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standal
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 @WebAppConfiguration
-public class BaseIntegrationTest {
+abstract public class BaseIntegrationTest {
 
     private MockMvc mvc;
 
