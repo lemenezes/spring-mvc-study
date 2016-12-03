@@ -1,16 +1,20 @@
 package items;
 
-import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-
+@RestController
 public class ItemsController {
-    private final ItemsRepository itemRepository;
 
-    public ItemsController(ItemsRepository itemRepository) {
-        this.itemRepository = itemRepository;
-    }
+    @Autowired
+    private ItemsRepository itemRepository;
 
-    public List<Item> allItems() {
-        return itemRepository.all();
+    @RequestMapping(value = "/items", method = RequestMethod.GET)
+    public ResponseEntity allItems() {
+        return new ResponseEntity(itemRepository.all(), HttpStatus.OK);
     }
 }
