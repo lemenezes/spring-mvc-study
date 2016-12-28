@@ -30,3 +30,9 @@ dependencies {
     testCompile("org.mockito:mockito-core:1.+")
 }
 
+bootRepackage {
+    enabled =false
+    mainClass = 'demo.Application'
+}
+
+
