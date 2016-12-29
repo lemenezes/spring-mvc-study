@@ -29,7 +29,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile("org.mockito:mockito-core:1.+")
-
 }
 
 bootRepackage {
@@ -40,6 +39,5 @@ bootRepackage {
 
 war {
     baseName = 'war-deployment'
-    version =  '1.0'
 }
 
