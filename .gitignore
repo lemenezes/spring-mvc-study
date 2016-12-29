@@ -6,7 +6,11 @@
 .project
 .settings
 bin
-#build
+build/classes
+build/dependency-cache
+build/reports
+build/test-results
+build/tmp
 target
 dependency-reduced-pom.xml
 *.sublime-*
